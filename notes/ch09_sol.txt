@@ -1,0 +1,105 @@
+Answers to Exercises (Chapter 9) 
+1. In the parameter list, the type of height is missing. Also, the declaration of product should be inside the body of the function. Here's the corrected version: 
+double triangle_area(double base, double height)
+{
+  double product;
+
+  product = base * height;
+  return product / 2;
+}
+3. 
+int gcd(int m, int n)
+{
+  int r;
+
+  while (n != 0) {
+    r = m % n;
+    m = n;
+    n = r;
+  }
+
+  return m;
+}
+5. 
+int num_digits(int n)
+{
+  int digits = 0;
+
+  do {
+    n /= 10;
+    digits++;
+  } while (n != 0);
+
+  return digits;
+}
+7. All statements are legal; statement (e) discards the value returned by the function. 
+9. i = 1, j = 2. (The arguments to swap are passed by value, so even though the values of a and b are swapped, the values of i and j are not.) 
+11. 
+float compute_GPA(char grades[], int n)
+{
+  int i, total = 0;
+
+  for (i = 0; i < n; i++)
+    switch (toupper(grades[i])) {
+      case 'A': total += 4; break;
+      case 'B': total += 3; break;
+      case 'C': total += 2; break;
+      case 'D': total += 1; break;
+    }
+
+  return (float) total / n;
+}
+12. 
+double inner_product(double a[], double b[], int n)
+{
+  int i;
+  double total = 0.0;
+
+  for (i = 0; i < n; i++)
+    total += a[i] * b[i];
+
+  return total;
+}
+13. 
+int evaluate_position(char board[8][8])
+{
+  int i, j, value = 0;
+
+  for (i = 0; i < 8; i++)
+    for (j = 0; j < 8; j++)
+      switch (board[i][j]) {
+        case 'Q': value += 9; break;
+        case 'R': value += 5; break;
+        case 'B':
+        case 'N': value += 3; break;
+        case 'P': value += 1; break;
+        case 'q': value -= 9; break;
+        case 'r': value -= 5; break;
+        case 'b':
+        case 'n': value -= 3; break;
+        case 'p': value -= 1; break;
+      }
+
+  return value;
+}
+14. The function will execute a return statement after looking at the first element of the array. If a[0] is 0 then true is returned, otherwise false is returned. Here's the corrected version: 
+bool has_zero(int a[], int n)
+{
+  int i;
+
+  for (i = 0; i < n; i++)
+    if (a[i] == 0)
+      return true;
+
+  return false;
+}
+16. 
+int fact(int n)
+{
+  return n <= 1 ? 1: n * fact(n - 1);
+}
+18. 
+int gcd(int m, int n)
+{
+  return n == 0 ? m : gcd(n, m % n);
+}

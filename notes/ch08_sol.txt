@@ -1,0 +1,77 @@
+Answers to Exercises (Chapter 8) 
+
+3. bool weekend[] = {true, false, false, false, false, false, true}; 
+
+4. bool weekend[] = {[0] = true, [6] = true}; 
+
+5. 
+int i;
+long fib_numbers[40] = {0, 1};
+
+for (i = 2; i < 40; i++)
+  fib_numbers[i] = fib_numbers[i-2] + fib_numbers[i-1];
+
+6. 
+const int segments[10][7] = {{1, 1, 1, 1, 1, 1, 0},
+
+                                {0, 1, 1, 0, 0, 0, 0},
+
+                                {1, 1, 0, 1, 1, 0, 1},
+
+                                {1, 1, 1, 1, 0, 0, 1},
+
+                                {0, 1, 1, 0, 0, 1, 1},
+
+                                {1, 0, 1, 1, 0, 1, 1},
+
+                                {1, 0, 1, 1, 1, 1, 1},
+
+                                {1, 1, 1, 0, 0, 0, 0},
+
+                                {1, 1, 1, 1, 1, 1, 1},
+
+                                {1, 1, 1, 1, 0, 1, 1}};
+
+8. float temperature_readings[30][24]; 
+
+9. 
+int day, hour;
+float total = 0, average;
+
+
+	for (day = 0; day < 30; day++)
+
+ 		for (hour = 0; hour < 24; hour++)
+
+    			total += temperature_readings[day][hour];
+
+	
+average = total / (30 * 24);
+
+10. 
+char chess_board[8][8] = {{'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
+
+                          {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+
+                          {' ', '.', ' ', '.', ' ', '.', ' ', '.'},
+
+                          {'.', ' ', '.', ' ', '.', ' ', '.', ' '},
+
+                          {' ', '.', ' ', '.', ' ', '.', ' ', '.'},
+
+                          {'.', ' ', '.', ' ', '.', ' ', '.', ' '},
+
+                          {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+
+                          {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'}};
+
+11. 
+char checker_board[8][8];
+int i, j;
+
+
+	for (i = 0; i < 8; i++)
+  
+		for (j = 0; j < 8; j++)
+
+    			checker_board[i][j] = ((i + j) % 2 ? 'R' : 'B');
