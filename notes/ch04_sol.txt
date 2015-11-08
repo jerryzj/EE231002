@@ -1,0 +1,53 @@
+Answers to Exercises (Chapter 4) 
+1. 
+(a) 1 2
+(b) 0
+(c) 1
+(d) 0 
+3. 
+(a) 1
+(b) –1 or –2
+(c) –1 or –2
+(d) 1 or 2 
+4. 
+(a) 1
+(b) –1
+(c) –1
+(d) 1 
+5. 
+(a) 3
+(b) –3 or 2
+(c) 3 or –2
+(d) –3 or 2 
+6. 
+(a) 3
+(b) –3
+(c) 3
+(d) –3 
+7. The range of values produced by 9 - ((total - 1) % 10) is not the same as those produced by 10 - (total % 10). The first expression produces values from 0 to 9; the second from 1 to 10. When the total is 70, for example, the first expression evaluates to 0 and the second to 10. 
+8. Yes. The original expression essentially says: "If the last digit of the total is zero, the check digit is zero. If not, subtract one from the last digit and then subtract this result from 9 to obtain the check digit." The expression given in this exercise essentially says: "If the last digit of the total is zero, the check digit is zero. If not, subtract the last digit from 10 to obtain the check digit." Since 9 - (d - 1) is equivalent to 10 - d for 1 ≤ d ≤ 9, the two expressions are equivalent. 
+10. 
+(a) 12 12
+(b) 3 4
+(c) 2 8
+(d) 6 9 
+11. 
+(a) 0 2
+(b) 4 11 6
+(c) 0 8 7
+(d) 3 4 5 4 
+12. 
+(a) 6 16
+(b) 6 -7
+(c) 6 23
+(d) 6 15 
+14. 
+(a) ((a * b) - (c * d)) + e
+(b) ((a / b) % c) / d
+(c) (((-a) - b) + c) - (+d)
+(d) ((a * (-b)) / c) - d 
+15. 
+(a) The value of i will be 3; the value of j will be 2.
+(b) The value of i will be 0; the value of j will be 2.
+(c) The value of i will be 1; the value of j will be 2.
+(d) The value of i will be 1; the value of j will be 3. 
